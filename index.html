@@ -57,3 +57,54 @@ render();
 </body></html>
 const products=[
 {id:1,name:'Brinco Dourado Elegance',cat:'Brincos',price:49.90,emoji:'✨'},
+<section id="adminSection" class="section">
+  <div class="panel">
+    <h2>Área da Dona</h2>
+    <p class="small">Acesso exclusivo à proprietária da Laluna Semijoias.</p>
+
+    <div id="adminLogin">
+      <label>E-mail da proprietária</label>
+      <input class="input" id="adminEmail" type="email"
+        placeholder="Seu e-mail" autocomplete="username">
+
+      <label>Senha</label>
+      <input class="input" id="adminPassword" type="password"
+        placeholder="Sua senha" autocomplete="current-password">
+
+      <button class="btn" id="adminEnter" style="width:100%">
+        Entrar no painel
+      </button>
+      <p id="adminMessage" class="small"></p>
+    </div>
+
+    <div id="adminProducts" hidden>
+      <h3>Cadastrar produto</h3>
+
+      <label>Nome da peça</label>
+      <input class="input" id="productName" placeholder="Ex.: Colar dourado">
+
+      <label>Categoria</label>
+      <select class="input" id="productCategory">
+        <option>Brincos</option>
+        <option>Colares</option>
+        <option>Anéis</option>
+        <option>Pulseiras</option>
+      </select>
+
+      <label>Preço em reais</label>
+      <input class="input" id="productPrice" type="number"
+        min="0.01" step="0.01" placeholder="49,90">
+
+      <label>Foto da peça</label>
+      <input class="input" id="productPhoto" type="file"
+        accept="image/*">
+
+      <button class="btn" id="saveProduct" style="width:100%">
+        Publicar produto
+      </button>
+      <p id="productMessage" class="small"></p>
+
+      <button class="pill" id="adminExit">Sair do painel</button>
+    </div>
+  </div>
+</section>
